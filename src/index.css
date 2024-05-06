@@ -13,18 +13,18 @@ code {
 }
 
 .root {
-  padding-top: 16px; /* equivalent to theme.spacing(4) */
+  padding-top: 16px; 
 }
 
 .searchContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px; /* equivalent to theme.spacing(4) */
+  margin-bottom: 16px; 
 }
 
 .textField {
-  margin-right: 16px; /* equivalent to theme.spacing(2) */
+  margin-right: 16px; 
 }
 /* 
 .home{
@@ -37,7 +37,7 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Ensure the div takes up the full height of its container */
+  height: 100vh; 
   background-color: rgb(83 149 179);
 }
 
