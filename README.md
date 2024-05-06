@@ -1,3 +1,28 @@
+# Weather App - Frontend
+
+## Overview
+This repository contains the frontend codebase for the Weather App.
+
+The Weather App is a web application that allows users to check the weather forecast for different locations.
+
+## Features
+- View current weather conditions for a specified city
+- Search for weather information by city name
+- Use geolocation to get the weather for the user's current location
+
+## Technologies Used
+- React
+- Redux
+- React Router
+- Material-UI
+- Axios
+
+## Getting Started
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+- Node.js installed on your machine
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,28 +94,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
-# Weather App - Frontend
-
-## Overview
-This repository contains the frontend codebase for the Weather App.
-
-The Weather App is a web application that allows users to check the weather forecast for different locations.
-
-## Features
-- View current weather conditions for a specified city
-- Search for weather information by city name
-- Use geolocation to get the weather for the user's current location
-
-## Technologies Used
-- React
-- Redux
-- React Router
-- Material-UI
-- Axios
-
-## Getting Started
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-- Node.js installed on your machine
