@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Login from "./components/Login";
+import Registration from "./components/Registration";
+import HomePage from "./components/HomePage";
+import WeatherDisplay from "./components/WeatherDisplay";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import NoAuth from "./components/NoAuth";
+import PrivateComponent from "./components/PrivateComponent";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+        <Routes>
+          <Route element={<PrivateComponent />}>
+            <Route path="/weather" element={<WeatherDisplay />} />
+            <Route path="/home" element={<HomePage />} />
+          </Route>
+
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Registration />} />
+          <Route path="/noauth" element={<NoAuth />} />
+        </Routes>
+      </Provider>
     </div>
   );
 }
