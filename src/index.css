@@ -26,11 +26,28 @@ code {
 .textField {
   margin-right: 16px; /* equivalent to theme.spacing(2) */
 }
-
+/* 
 .home{
   height: 100vh;
   background-color: rgb(83 149 179);
+} */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure the div takes up the full height of its container */
+  background-color: rgb(83 149 179);
 }
+
+/* Adjustments for smaller screen sizes */
+@media (max-width: 768px) {
+  .home {
+    padding-top: 50px; /* Adjust as needed for spacing */
+  }
+}
+
 h5,h6,p{
   color: whitesmoke;
 }
