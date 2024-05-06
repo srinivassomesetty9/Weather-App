@@ -28,7 +28,7 @@ const Login = () => {
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
 
   const handleLogin = () => {
-    console.warn(email, password);
+    // console.warn(email, password);
 
     let data = { email: email, password: password };
 
@@ -62,7 +62,7 @@ const Login = () => {
             }
           })
           .catch((err) => {
-            console.log(err, "ERR");
+            // console.log(err, "ERR");
             if (err?.code === "ERR_NETWORK") {
               setMessage(err?.message);
             } else {

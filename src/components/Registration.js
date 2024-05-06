@@ -88,7 +88,7 @@ const Registration = () => {
           }
         })
         .catch((err) => {
-          console.log(err);
+          // console.log(err);
           if (err?.code === "ERR_NETWORK") {
             setMessage(err?.message);
           } else {
