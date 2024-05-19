@@ -10,10 +10,7 @@ import {
   TextField,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import { baseUrl } from "../Common";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-
 const Login = () => {
   let navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -32,49 +29,50 @@ const Login = () => {
 
     let data = { email: email, password: password };
 
-    if (email === "" || email === null || email === undefined) {
-      setEmailError("Please Enter Email");
-    }
-    if (password === "" || password === null || password === undefined) {
-      setPasswordError("Please Enter Password");
-    }
+    // if (email === "" || email === null || email === undefined) {
+    //   setEmailError("Please Enter Email");
+    // }
+    // if (password === "" || password === null || password === undefined) {
+    //   setPasswordError("Please Enter Password");
+    // }
 
-    if (email !== "" && password !== "") {
-      if (email !== undefined && password !== undefined) {
-        axios
-          .post(`${baseUrl}/login`, data, {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
-          .then((res) => {
-            // console.log(res.data.message);
+    // if (email !== "" && password !== "") {
+    //   if (email !== undefined && password !== undefined) {
+    //     axios
+    //       .post(`${baseUrl}/login`, data, {
+    //         headers: {
+    //           "Content-Type": "application/json",
+    //         },
+    //       })
+    //       .then((res) => {
+    //         // console.log(res.data.message);
 
-            if (res.data.message === "Login successful") {
-              navigate("/home");
-              localStorage.setItem("user", JSON.stringify(res));
-            } else {
-              setMessage(res.data.message);
-              // Hide the alert after 5 seconds
-              setTimeout(() => {
-                setMessage("");
-              }, 3000);
-            }
-          })
-          .catch((err) => {
-            // console.log(err, "ERR");
-            if (err?.code === "ERR_NETWORK") {
-              setMessage(err?.message);
-            } else {
-              setMessage(err?.response?.data?.error);
-              // Hide the alert after 5 seconds
-              setTimeout(() => {
-                setMessage("");
-              }, 3000);
-            }
-          });
-      }
-    }
+    //         if (res.data.message === "Login successful") {
+    //           navigate("/home");
+    //           localStorage.setItem("user", JSON.stringify(res));
+    //         } else {
+    //           setMessage(res.data.message);
+    //           // Hide the alert after 5 seconds
+    //           setTimeout(() => {
+    //             setMessage("");
+    //           }, 3000);
+    //         }
+    //       })
+    //       .catch((err) => {
+    //         // console.log(err, "ERR");
+    //         if (err?.code === "ERR_NETWORK") {
+    //           setMessage(err?.message);
+    //         } else {
+    //           setMessage(err?.response?.data?.error);
+    //           // Hide the alert after 5 seconds
+    //           setTimeout(() => {
+    //             setMessage("");
+    //           }, 3000);
+    //         }
+    //       });
+    //   }
+    // }
+    navigate("/home")
   };
 
   return (
@@ -97,19 +95,8 @@ const Login = () => {
               alignItems="flex-end"
               spacing={0}
               sx={{ display: { xs: "none", sm: "flex" } }}
+              style={{backgroundColor:"#cfe1e9"}}
             >
-              <Grid item xs={12} md={12} sx={{ textAlign: "left" }}>
-                <img
-                  src="/login.gif"
-                  style={{
-                    maxWidth: "100%",
-                    maxheight: "100vh",
-                    borderRadius: "999px 999px 999px 0",
-                  }}
-                  className="bannerlogin"
-                  alt="gif"
-                />
-              </Grid>
             </Grid>
             {/* end left side wrap*/}
             {/* start Login form right side wrap */}
